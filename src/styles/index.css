@@ -138,86 +138,73 @@ svg {
     @apply inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/10 bg-white/60 text-ink transition hover:border-ink hover:bg-ink hover:text-paper;
   }
 
-  .tech-panel {
-    @apply overflow-hidden rounded-[2rem] border border-ink/10 p-5 shadow-soft sm:p-8;
-    background:
-      linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.38)),
-      radial-gradient(circle at 100% 0%, rgba(37, 111, 143, 0.16), transparent 32%),
-      radial-gradient(circle at 0% 100%, rgba(216, 111, 69, 0.14), transparent 26%);
+  .tech-section {
+    @apply border-y border-ink/10 py-12 sm:py-14;
   }
 
-  .tech-focus-grid {
-    @apply grid gap-3 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3;
+  .tech-heading {
+    @apply grid gap-5 md:grid-cols-[0.95fr_1.05fr] md:items-end;
   }
 
-  .tech-focus-item {
-    @apply rounded-2xl border border-ink/10 bg-ink p-4 text-paper shadow-sm;
+  .tech-heading p {
+    @apply max-w-2xl text-base leading-8 text-ink/70 md:justify-self-end;
   }
 
-  .tech-focus-item svg {
-    @apply mb-4 text-[#dfe8ee];
+  .tech-featured {
+    @apply mt-8 flex flex-wrap gap-2 border-y border-ink/10 py-4;
   }
 
-  .tech-focus-item span {
-    @apply block text-xs font-bold uppercase tracking-[0.18em] text-paper/50;
+  .tech-featured span {
+    @apply rounded-full bg-ink px-3.5 py-2 text-xs font-black uppercase tracking-[0.12em] text-paper;
   }
 
-  .tech-focus-item strong {
-    @apply mt-2 block text-sm font-black leading-tight text-paper;
+  .tech-grid {
+    @apply mt-8 grid gap-3 md:grid-cols-2;
   }
 
-  .tech-marquee {
-    @apply relative mt-10 overflow-hidden border-y border-ink/10 py-4;
+  .tech-compact-card {
+    @apply relative overflow-hidden rounded-2xl border border-ink/10 bg-white/55 p-5 transition hover:-translate-y-0.5 hover:bg-white/75 sm:p-6;
   }
 
-  .tech-marquee::before,
-  .tech-marquee::after {
-    @apply pointer-events-none absolute top-0 z-10 h-full w-16 content-[''];
+  .tech-compact-card::before {
+    @apply absolute inset-y-5 left-0 w-1 rounded-r-full content-[''];
+    background: #256f8f;
   }
 
-  .tech-marquee::before {
-    left: 0;
-    background: linear-gradient(90deg, #f4f0e8, transparent);
+  .tech-framework::before {
+    background: #3f6f56;
   }
 
-  .tech-marquee::after {
-    right: 0;
-    background: linear-gradient(270deg, #f4f0e8, transparent);
+  .tech-tools::before {
+    background: #d86f45;
   }
 
-  .tech-marquee > div {
-    @apply flex w-max gap-3;
-    animation: techMarquee 28s linear infinite;
+  .tech-infra::before {
+    background: #111827;
   }
 
-  .tech-marquee span {
-    @apply rounded-full border border-ink/10 bg-white/70 px-4 py-2 text-sm font-black text-ink/70;
+  .tech-card-head {
+    @apply mb-5 flex gap-4;
   }
 
-  .tech-card {
-    @apply rounded-[1.35rem] border border-ink/10 bg-white/60 p-5 transition hover:-translate-y-1 hover:bg-white/80 hover:shadow-soft sm:p-6;
+  .tech-card-head > span {
+    @apply grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-paper text-ink shadow-sm;
   }
 
-  .tech-card-icon {
-    @apply grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-paper text-ink shadow-sm;
+  .tech-card-head h3 {
+    @apply font-display text-lg font-black leading-tight text-ink sm:text-xl;
   }
 
-  .tech-list-item {
-    @apply flex items-start gap-3 text-sm font-semibold leading-6 text-ink/70 sm:text-base;
+  .tech-card-head p {
+    @apply mt-1 text-sm leading-6 text-ink/55;
   }
 
-  .tech-list-item span {
-    @apply mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ocean;
-  }
-}
-
-@keyframes techMarquee {
-  from {
-    transform: translateX(0);
+  .tech-tags {
+    @apply flex flex-wrap gap-2;
   }
 
-  to {
-    transform: translateX(calc(-50% - 0.375rem));
+  .tech-tags span {
+    @apply rounded-full border border-ink/10 bg-paper/70 px-3 py-1.5 text-sm font-semibold leading-tight text-ink/70;
   }
 }
 
@@ -290,8 +277,8 @@ svg {
     transform: scale(1.04);
   }
 
-  .tech-panel {
-    border-radius: 1.5rem;
+  .tech-section {
+    padding-block: 3rem;
   }
 }
 
@@ -330,13 +317,17 @@ svg {
     margin-bottom: 1.6rem;
   }
 
-  .tech-panel {
-    margin-inline: -0.25rem;
-    padding: 1rem;
+  .tech-section {
+    padding-block: 2.5rem;
   }
 
-  .tech-marquee {
-    margin-top: 2rem;
+  .tech-featured {
+    gap: 0.45rem;
+  }
+
+  .tech-featured span {
+    font-size: 0.68rem;
+    padding: 0.45rem 0.65rem;
   }
 }
 

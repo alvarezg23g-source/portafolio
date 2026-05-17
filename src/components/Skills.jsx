@@ -1,80 +1,73 @@
-import { Braces, Code2, Database, Network, Server, TerminalSquare, Wrench } from 'lucide-react';
+import { Boxes, Braces, Database, Network, Wrench } from 'lucide-react';
 import { skillGroups } from '../data/portfolio.js';
 
-const groupIcons = [Code2, Server, Wrench, Network];
-
-const focusItems = [
-  { label: 'Aplicaciones web', value: 'Front-end + Backend', icon: Braces },
-  { label: 'Datos', value: 'SQL Server + SQL', icon: Database },
-  { label: 'Sistemas', value: 'Redes + Servidores', icon: TerminalSquare },
+const groupMeta = [
+  {
+    icon: Braces,
+    tone: 'code',
+    summary: 'Base para construir interfaces, logica y estructura de datos.',
+  },
+  {
+    icon: Boxes,
+    tone: 'framework',
+    summary: 'Herramientas para transformar ideas en aplicaciones reales.',
+  },
+  {
+    icon: Wrench,
+    tone: 'tools',
+    summary: 'Entornos de trabajo para desarrollar, versionar y depurar.',
+  },
+  {
+    icon: Network,
+    tone: 'infra',
+    summary: 'Conocimiento tecnico para operar sistemas, redes y servidores.',
+  },
 ];
 
-const featuredSkills = ['C#', 'JavaScript', 'PHP', 'SQL', 'Node.js', 'Laravel', 'ASP.NET', 'Git'];
+const featured = ['C#', 'JavaScript', 'PHP', 'SQL', '.NET', 'Node', 'Laravel', 'Git'];
 
 export function Skills() {
   return (
     <section id="skills" className="section">
-      <div className="tech-panel">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+      <div className="tech-section">
+        <div className="tech-heading">
           <div>
-            <div className="section-kicker text-ocean">Tecnologias y Herramientas</div>
-            <h2 className="section-title max-w-3xl">Tecnologias y Herramientas</h2>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-ink/70 sm:text-lg">
-              Conjunto de tecnologias orientadas a la creacion de aplicaciones modernas,
-              eficientes y mantenibles, integrando desarrollo de software, bases de datos, redes e
-              infraestructura tecnologica.
-            </p>
+            <div className="section-kicker">Tecnologias y Herramientas</div>
+            <h2 className="section-title">Un stack practico, pensado para construir.</h2>
           </div>
-
-          <div className="tech-focus-grid">
-            {focusItems.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div key={item.label} className="tech-focus-item">
-                  <Icon size={20} />
-                  <span>{item.label}</span>
-                  <strong>{item.value}</strong>
-                </div>
-              );
-            })}
-          </div>
+          <p>
+            Tecnologias orientadas a crear aplicaciones modernas, eficientes y mantenibles,
+            integrando software, bases de datos, redes e infraestructura.
+          </p>
         </div>
 
-        <div className="tech-marquee" aria-label="Tecnologias principales">
-          <div>
-            {[...featuredSkills, ...featuredSkills].map((skill, index) => (
-              <span key={`${skill}-${index}`}>{skill}</span>
-            ))}
-          </div>
+        <div className="tech-featured" aria-label="Tecnologias principales">
+          {featured.map((item) => (
+            <span key={item}>{item}</span>
+          ))}
         </div>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-2">
+        <div className="tech-grid">
           {skillGroups.map((group, index) => {
-            const Icon = groupIcons[index] ?? Code2;
+            const meta = groupMeta[index];
+            const Icon = meta.icon ?? Database;
             return (
-              <article key={group.title} className="tech-card">
-                <div className="mb-5 flex items-start gap-4">
-                  <div className="tech-card-icon">
-                    <Icon size={21} />
-                  </div>
+              <article key={group.title} className={`tech-compact-card tech-${meta.tone}`}>
+                <div className="tech-card-head">
+                  <span>
+                    <Icon size={18} />
+                  </span>
                   <div>
-                    <p className="text-xs font-black uppercase tracking-[0.18em] text-ink/40">
-                      0{index + 1}
-                    </p>
-                    <h3 className="mt-1 font-display text-xl font-black leading-tight">
-                      {group.title}
-                    </h3>
+                    <h3>{group.title}</h3>
+                    <p>{meta.summary}</p>
                   </div>
                 </div>
 
-                <ul className="space-y-2.5">
+                <div className="tech-tags">
                   {group.items.map((item) => (
-                    <li key={item} className="tech-list-item">
-                      <span />
-                      {item}
-                    </li>
+                    <span key={item}>{item}</span>
                   ))}
-                </ul>
+                </div>
               </article>
             );
           })}

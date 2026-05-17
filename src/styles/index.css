@@ -15,9 +15,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background:
-    radial-gradient(circle at 12% 8%, rgba(31, 111, 139, 0.08), transparent 25rem),
-    linear-gradient(180deg, #f7f1e7 0%, #efe7db 100%);
+  background: #ffffff;
 }
 
 img,
@@ -28,24 +26,21 @@ svg {
 @layer components {
   .hero-shell {
     @apply relative isolate min-h-screen overflow-hidden;
-    background: #081114;
+    background: #050505;
   }
 
   .hero-left-panel {
     @apply absolute inset-0 -z-10;
-    background:
-      radial-gradient(circle at 16% 24%, rgba(31, 111, 139, 0.12), transparent 24rem),
-      linear-gradient(145deg, #f7f1e7 0%, #e7ddd0 100%);
+    background: #ffffff;
     clip-path: polygon(0 0, 59% 0, 44% 100%, 0 100%);
   }
 
   .hero-dark-panel {
     @apply absolute inset-0 -z-20;
     background:
-      radial-gradient(circle at 76% 36%, rgba(49, 127, 151, 0.28), transparent 24%),
-      radial-gradient(circle at 94% 82%, rgba(217, 103, 78, 0.12), transparent 22%),
-      linear-gradient(135deg, rgba(255, 255, 255, 0.03), transparent 58%),
-      #081114;
+      radial-gradient(circle at 76% 36%, rgba(255, 255, 255, 0.08), transparent 24%),
+      linear-gradient(135deg, rgba(255, 255, 255, 0.04), transparent 58%),
+      #050505;
   }
 
   .hero-nav {
@@ -57,7 +52,7 @@ svg {
   }
 
   .hero-nav-cta {
-    @apply rounded-full bg-paper px-6 py-3 font-bold text-ink shadow-sm hover:bg-mist hover:text-ink;
+    @apply rounded-full bg-white px-6 py-3 font-bold text-ink shadow-sm hover:bg-zinc-200 hover:text-ink;
   }
 
   .hero-logo {
@@ -94,7 +89,7 @@ svg {
   }
 
   .hero-socials a {
-    @apply grid h-12 w-12 place-items-center bg-white/65 text-ink shadow-sm ring-1 ring-ink/10 backdrop-blur transition hover:-translate-y-1 hover:bg-paper;
+    @apply grid h-12 w-12 place-items-center bg-zinc-100 text-ink shadow-sm ring-1 ring-ink/10 transition hover:-translate-y-1 hover:bg-white;
   }
 
   .hero-photo-card {
@@ -109,7 +104,7 @@ svg {
 
   .hero-photo-card::before {
     @apply absolute bottom-4 left-1/2 h-[72%] w-[78%] -translate-x-1/2 rounded-full content-[''];
-    background: rgba(31, 111, 139, 0.18);
+    background: rgba(255, 255, 255, 0.08);
     filter: blur(44px);
   }
 
@@ -124,7 +119,7 @@ svg {
   }
 
   .section-kicker {
-    @apply mb-4 text-sm font-black uppercase tracking-[0.24em] text-ocean;
+    @apply mb-4 text-sm font-black uppercase tracking-[0.24em] text-zinc-500;
   }
 
   .section-title {
@@ -145,7 +140,7 @@ svg {
 
   .minimal-tech {
     @apply grid gap-8 border-y border-ink/10 py-12 md:grid-cols-[1fr_0.82fr] md:items-center;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.22), transparent 50%);
+    background: transparent;
   }
 
   .minimal-tech-copy h2 {
@@ -221,7 +216,7 @@ svg {
   }
 
   .minimal-tech-categories svg {
-    @apply text-ember;
+    @apply text-zinc-500;
   }
 
   .minimal-tech-categories h3 {

@@ -8,13 +8,29 @@ export const profile = {
   whatsapp: 'https://wa.me/50584896097',
 };
 
-export const skills = [
-  'React',
-  'JavaScript',
-  'Tailwind CSS',
-  'Node.js',
-  'Firebase',
-  'Git',
+export const skillGroups = [
+  {
+    title: 'Lenguajes de Programacion',
+    items: ['C#', 'PHP', 'JavaScript', 'HTML5', 'CSS3', 'SQL'],
+  },
+  {
+    title: 'Frameworks y Tecnologias',
+    items: ['.NET Framework', 'Node.js', 'Laravel', 'ASP.NET'],
+  },
+  {
+    title: 'Herramientas y Entornos',
+    items: ['Visual Studio', 'SQL Server', 'Git'],
+  },
+  {
+    title: 'Infraestructura y Sistemas',
+    items: [
+      'Administracion de sistemas operativos',
+      'Gestion y configuracion de redes',
+      'Virtualizacion de entornos',
+      'Configuracion de servidores',
+      'Soporte tecnico y mantenimiento de sistemas',
+    ],
+  },
 ];
 
 export const projects = [

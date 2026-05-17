@@ -138,73 +138,92 @@ svg {
     @apply inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/10 bg-white/60 text-ink transition hover:border-ink hover:bg-ink hover:text-paper;
   }
 
-  .tech-section {
-    @apply border-y border-ink/10 py-12 sm:py-14;
+  .minimal-tech {
+    @apply grid gap-8 border-y border-ink/10 py-12 md:grid-cols-[1fr_0.82fr] md:items-center;
   }
 
-  .tech-heading {
-    @apply grid gap-5 md:grid-cols-[0.95fr_1.05fr] md:items-end;
+  .minimal-tech-copy h2 {
+    @apply font-display text-4xl font-black leading-none tracking-tight text-ink sm:text-5xl md:text-6xl;
   }
 
-  .tech-heading p {
-    @apply max-w-2xl text-base leading-8 text-ink/70 md:justify-self-end;
+  .minimal-tech-copy p {
+    @apply mt-5 max-w-2xl text-base leading-8 text-ink/70 sm:text-lg;
   }
 
-  .tech-featured {
-    @apply mt-8 flex flex-wrap gap-2 border-y border-ink/10 py-4;
+  .minimal-tech-console {
+    @apply rounded-[1.6rem] border border-ink/10 bg-ink p-4 text-paper shadow-soft;
   }
 
-  .tech-featured span {
-    @apply rounded-full bg-ink px-3.5 py-2 text-xs font-black uppercase tracking-[0.12em] text-paper;
+  .console-top {
+    @apply mb-6 flex gap-2;
   }
 
-  .tech-grid {
-    @apply mt-8 grid gap-3 md:grid-cols-2;
+  .console-top span {
+    @apply h-2.5 w-2.5 rounded-full bg-paper/25;
   }
 
-  .tech-compact-card {
-    @apply relative overflow-hidden rounded-2xl border border-ink/10 bg-white/55 p-5 transition hover:-translate-y-0.5 hover:bg-white/75 sm:p-6;
+  .console-line {
+    @apply flex items-center gap-2 rounded-xl bg-white/10 px-4 py-3 text-sm font-bold text-paper/80;
   }
 
-  .tech-compact-card::before {
-    @apply absolute inset-y-5 left-0 w-1 rounded-r-full content-[''];
-    background: #256f8f;
+  .console-line svg {
+    @apply text-[#dfe8ee];
   }
 
-  .tech-framework::before {
-    background: #3f6f56;
+  .console-tags {
+    @apply mt-5 flex flex-wrap gap-2;
   }
 
-  .tech-tools::before {
-    background: #d86f45;
+  .console-tags span {
+    @apply rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs font-bold text-paper/80;
   }
 
-  .tech-infra::before {
-    background: #111827;
+  .console-grid {
+    @apply mt-6 grid grid-cols-3 gap-2;
   }
 
-  .tech-card-head {
-    @apply mb-5 flex gap-4;
+  .console-grid div {
+    @apply rounded-2xl bg-white/10 p-3;
   }
 
-  .tech-card-head > span {
-    @apply grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-paper text-ink shadow-sm;
+  .console-grid strong {
+    @apply block font-display text-xl font-black text-paper;
   }
 
-  .tech-card-head h3 {
-    @apply font-display text-lg font-black leading-tight text-ink sm:text-xl;
+  .console-grid span {
+    @apply mt-1 block text-xs font-bold uppercase tracking-[0.14em] text-paper/40;
   }
 
-  .tech-card-head p {
-    @apply mt-1 text-sm leading-6 text-ink/55;
+  .minimal-tech-categories {
+    @apply grid gap-0 divide-y divide-ink/10 border-b border-ink/10 md:grid-cols-2 md:divide-x md:divide-y-0;
   }
 
-  .tech-tags {
-    @apply flex flex-wrap gap-2;
+  .minimal-tech-categories article {
+    @apply px-0 py-6 md:px-6;
   }
 
-  .tech-tags span {
-    @apply rounded-full border border-ink/10 bg-paper/70 px-3 py-1.5 text-sm font-semibold leading-tight text-ink/70;
+  .minimal-tech-categories article:nth-child(odd) {
+    @apply md:pl-0;
+  }
+
+  .minimal-tech-categories article:nth-child(even) {
+    @apply md:pr-0;
+  }
+
+  .minimal-tech-categories div {
+    @apply mb-3 flex items-center gap-3;
+  }
+
+  .minimal-tech-categories svg {
+    @apply text-ocean;
+  }
+
+  .minimal-tech-categories h3 {
+    @apply font-display text-lg font-black leading-tight text-ink;
+  }
+
+  .minimal-tech-categories p {
+    @apply text-sm font-medium leading-7 text-ink/65;
   }
 }
 
@@ -277,7 +296,7 @@ svg {
     transform: scale(1.04);
   }
 
-  .tech-section {
+  .minimal-tech {
     padding-block: 3rem;
   }
 }
@@ -317,17 +336,16 @@ svg {
     margin-bottom: 1.6rem;
   }
 
-  .tech-section {
+  .minimal-tech {
     padding-block: 2.5rem;
   }
 
-  .tech-featured {
-    gap: 0.45rem;
+  .minimal-tech-console {
+    border-radius: 1.25rem;
   }
 
-  .tech-featured span {
-    font-size: 0.68rem;
-    padding: 0.45rem 0.65rem;
+  .minimal-tech-categories article {
+    padding-block: 1.25rem;
   }
 }
 

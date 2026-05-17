@@ -1,77 +1,67 @@
-import { Boxes, Braces, Database, Network, Wrench } from 'lucide-react';
+import { Code2, Database, Layers3, Network, Server, Terminal } from 'lucide-react';
 import { skillGroups } from '../data/portfolio.js';
 
-const groupMeta = [
-  {
-    icon: Braces,
-    tone: 'code',
-    summary: 'Base para construir interfaces, logica y estructura de datos.',
-  },
-  {
-    icon: Boxes,
-    tone: 'framework',
-    summary: 'Herramientas para transformar ideas en aplicaciones reales.',
-  },
-  {
-    icon: Wrench,
-    tone: 'tools',
-    summary: 'Entornos de trabajo para desarrollar, versionar y depurar.',
-  },
-  {
-    icon: Network,
-    tone: 'infra',
-    summary: 'Conocimiento tecnico para operar sistemas, redes y servidores.',
-  },
-];
-
-const featured = ['C#', 'JavaScript', 'PHP', 'SQL', '.NET', 'Node', 'Laravel', 'Git'];
+const categoryIcons = [Code2, Layers3, Terminal, Network];
+const keyTech = ['C#', 'PHP', 'JavaScript', 'SQL', 'Node.js', 'Laravel', 'ASP.NET', 'Git'];
 
 export function Skills() {
   return (
     <section id="skills" className="section">
-      <div className="tech-section">
-        <div className="tech-heading">
-          <div>
-            <div className="section-kicker">Tecnologias y Herramientas</div>
-            <h2 className="section-title">Un stack practico, pensado para construir.</h2>
-          </div>
+      <div className="minimal-tech">
+        <div className="minimal-tech-copy">
+          <div className="section-kicker">Tecnologias y Herramientas</div>
+          <h2>Minimal Tech Landing Page</h2>
           <p>
-            Tecnologias orientadas a crear aplicaciones modernas, eficientes y mantenibles,
-            integrando software, bases de datos, redes e infraestructura.
+            Un conjunto de tecnologias para construir aplicaciones modernas, mantener sistemas
+            estables y conectar software con datos, redes e infraestructura.
           </p>
         </div>
 
-        <div className="tech-featured" aria-label="Tecnologias principales">
-          {featured.map((item) => (
-            <span key={item}>{item}</span>
-          ))}
+        <div className="minimal-tech-console" aria-label="Resumen tecnico">
+          <div className="console-top">
+            <span />
+            <span />
+            <span />
+          </div>
+          <div className="console-line">
+            <Server size={17} />
+            <span>portfolio.stack</span>
+          </div>
+          <div className="console-tags">
+            {keyTech.map((item) => (
+              <span key={item}>{item}</span>
+            ))}
+          </div>
+          <div className="console-grid">
+            <div>
+              <strong>04</strong>
+              <span>areas</span>
+            </div>
+            <div>
+              <strong>18+</strong>
+              <span>skills</span>
+            </div>
+            <div>
+              <strong>Full</strong>
+              <span>scope</span>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div className="tech-grid">
-          {skillGroups.map((group, index) => {
-            const meta = groupMeta[index];
-            const Icon = meta.icon ?? Database;
-            return (
-              <article key={group.title} className={`tech-compact-card tech-${meta.tone}`}>
-                <div className="tech-card-head">
-                  <span>
-                    <Icon size={18} />
-                  </span>
-                  <div>
-                    <h3>{group.title}</h3>
-                    <p>{meta.summary}</p>
-                  </div>
-                </div>
-
-                <div className="tech-tags">
-                  {group.items.map((item) => (
-                    <span key={item}>{item}</span>
-                  ))}
-                </div>
-              </article>
-            );
-          })}
-        </div>
+      <div className="minimal-tech-categories">
+        {skillGroups.map((group, index) => {
+          const Icon = categoryIcons[index] ?? Database;
+          return (
+            <article key={group.title}>
+              <div>
+                <Icon size={20} />
+                <h3>{group.title}</h3>
+              </div>
+              <p>{group.items.join(' / ')}</p>
+            </article>
+          );
+        })}
       </div>
     </section>
   );

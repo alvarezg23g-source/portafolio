@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #ececec;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+@layer components {
+  .hero-shell {
+    @apply relative isolate min-h-screen overflow-hidden;
+    background: #050505;
+  }
+
+  .hero-left-panel {
+    @apply absolute inset-0 -z-10;
+    background: #ececec;
+    clip-path: polygon(0 0, 59% 0, 44% 100%, 0 100%);
+  }
+
+  .hero-dark-panel {
+    @apply absolute inset-0 -z-20;
+    background:
+      radial-gradient(circle at 78% 42%, rgba(165, 198, 221, 0.18), transparent 24%),
+      linear-gradient(135deg, transparent 55%, rgba(255, 255, 255, 0.06)),
+      #050505;
+  }
+
+  .hero-nav {
+    @apply absolute right-6 top-7 z-30 hidden items-center gap-9 text-sm font-semibold text-white/80 md:flex;
+  }
+
+  .hero-nav a {
+    @apply transition hover:text-white;
+  }
+
+  .hero-nav-cta {
+    @apply rounded-full bg-white px-6 py-3 font-bold text-black shadow-sm hover:bg-[#dfe8ee] hover:text-black;
+  }
+
+  .hero-logo {
+    @apply absolute left-7 top-7 z-20 h-14 w-20;
+  }
+
+  .hero-logo svg {
+    @apply h-full w-full;
+    fill: none;
+    stroke: #050505;
+    stroke-width: 6;
+    stroke-linecap: square;
+    stroke-linejoin: miter;
+  }
+
+  .hero-copy {
+    @apply absolute left-[9%] top-1/2 z-20 -translate-y-1/2;
+  }
+
+  .hero-copy p {
+    @apply mb-4 text-2xl font-bold text-black;
+  }
+
+  .hero-copy h1 {
+    @apply font-display text-6xl font-black leading-none tracking-tight text-black md:text-7xl lg:text-8xl;
+  }
+
+  .hero-copy h2 {
+    @apply mt-4 text-2xl font-medium text-black/60 md:text-3xl;
+  }
+
+  .hero-socials {
+    @apply absolute bottom-10 left-[9%] z-20 flex gap-5;
+  }
+
+  .hero-socials a {
+    @apply grid h-12 w-12 place-items-center bg-[#d8d8d8] text-black shadow-sm transition hover:-translate-y-1 hover:bg-white;
+  }
+
+  .hero-photo-card {
+    @apply absolute bottom-0 right-[8%] z-10 flex w-[32rem] max-w-[41vw] items-end justify-center overflow-hidden;
+    height: clamp(34rem, 78vh, 44rem);
+    border-radius: 2.5rem 2.5rem 0 0;
+  }
+
+  .hero-photo-card.is-hidden {
+    display: none;
+  }
+
+  .hero-photo-card::before {
+    @apply absolute bottom-4 left-1/2 h-[72%] w-[78%] -translate-x-1/2 rounded-full content-[''];
+    background: rgba(165, 198, 221, 0.12);
+    filter: blur(44px);
+  }
+
+  .hero-photo-card img {
+    @apply relative z-10 h-full w-full object-contain object-bottom;
+    transform: scale(1.02);
+    filter: drop-shadow(0 34px 36px rgba(0, 0, 0, 0.72));
+  }
+
+  .section {
+    @apply mx-auto max-w-6xl px-5 py-20 sm:px-6;
+  }
+
+  .section-kicker {
+    @apply mb-4 text-sm font-black uppercase tracking-[0.24em] text-ember;
+  }
+
+  .section-title {
+    @apply font-display text-3xl font-black leading-tight tracking-tight text-ink md:text-5xl;
+  }
+
+  .primary-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-ink px-6 py-3 font-bold text-paper transition hover:bg-moss;
+  }
+
+  .secondary-button {
+    @apply inline-flex items-center justify-center rounded-full border border-ink/15 bg-white/55 px-6 py-3 font-bold text-ink transition hover:border-ink hover:bg-white;
+  }
+
+  .icon-link {
+    @apply inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/10 bg-white/60 text-ink transition hover:border-ink hover:bg-ink hover:text-paper;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-shell {
+    min-height: 100svh;
+    display: grid;
+    background: #050505;
+    grid-template-rows: auto auto auto 1fr;
+  }
+
+  .hero-left-panel {
+    clip-path: polygon(0 0, 100% 0, 100% 51%, 0 63%);
+  }
+
+  .hero-logo {
+    left: 1.25rem;
+    top: 1.25rem;
+  }
+
+  .hero-copy {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: min(100%, 30rem);
+    padding: 8rem 1.25rem 3rem;
+  }
+
+  .hero-copy p {
+    font-size: 1.25rem;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.85rem, 13.5vw, 5.2rem);
+    line-height: 0.96;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-copy h2 {
+    font-size: clamp(1.18rem, 5vw, 1.45rem);
+  }
+
+  .hero-socials {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    gap: 0.85rem;
+    padding: 0 1.25rem 1.5rem;
+  }
+
+  .hero-socials a {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .hero-photo-card {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: min(72vw, 19rem);
+    height: clamp(23rem, 54svh, 31rem);
+    max-width: none;
+    justify-self: end;
+    margin: 0 1rem 2rem 0;
+    align-self: end;
+  }
+
+  .hero-photo-card img {
+    transform: scale(1.04);
+  }
+}
+
+@media (max-width: 520px) {
+  .section {
+    @apply px-4 py-14;
+  }
+
+  .section-kicker {
+    @apply mb-3 text-xs;
+    letter-spacing: 0.18em;
+  }
+
+  .section-title {
+    @apply text-[2rem];
+    line-height: 1.05;
+  }
+
+  .hero-left-panel {
+    clip-path: polygon(0 0, 100% 0, 100% 47%, 0 59%);
+  }
+
+  .hero-copy {
+    padding: 7.4rem 1rem 2.25rem;
+  }
+
+  .hero-copy p {
+    margin-bottom: 0.65rem;
+    font-size: 1.05rem;
+  }
+
+  .hero-photo-card {
+    width: min(75vw, 17rem);
+    height: clamp(21rem, 50svh, 28rem);
+    margin-right: 0.4rem;
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-copy h1 {
+    font-size: clamp(2.55rem, 12.8vw, 3.2rem);
+  }
+
+  .hero-photo-card {
+    width: 73vw;
+    height: 20.5rem;
+  }
+}
+
+@media (max-height: 760px) and (min-width: 901px) {
+  .hero-photo-card {
+    height: 82vh;
+  }
+
+  .hero-photo-card img {
+    transform: scale(1.06);
+  }
+}

@@ -15,7 +15,9 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background: #ececec;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(31, 111, 139, 0.08), transparent 25rem),
+    linear-gradient(180deg, #f7f1e7 0%, #efe7db 100%);
 }
 
 img,
@@ -26,21 +28,24 @@ svg {
 @layer components {
   .hero-shell {
     @apply relative isolate min-h-screen overflow-hidden;
-    background: #050505;
+    background: #081114;
   }
 
   .hero-left-panel {
     @apply absolute inset-0 -z-10;
-    background: #ececec;
+    background:
+      radial-gradient(circle at 16% 24%, rgba(31, 111, 139, 0.12), transparent 24rem),
+      linear-gradient(145deg, #f7f1e7 0%, #e7ddd0 100%);
     clip-path: polygon(0 0, 59% 0, 44% 100%, 0 100%);
   }
 
   .hero-dark-panel {
     @apply absolute inset-0 -z-20;
     background:
-      radial-gradient(circle at 78% 42%, rgba(165, 198, 221, 0.18), transparent 24%),
-      linear-gradient(135deg, transparent 55%, rgba(255, 255, 255, 0.06)),
-      #050505;
+      radial-gradient(circle at 76% 36%, rgba(49, 127, 151, 0.28), transparent 24%),
+      radial-gradient(circle at 94% 82%, rgba(217, 103, 78, 0.12), transparent 22%),
+      linear-gradient(135deg, rgba(255, 255, 255, 0.03), transparent 58%),
+      #081114;
   }
 
   .hero-nav {
@@ -52,7 +57,7 @@ svg {
   }
 
   .hero-nav-cta {
-    @apply rounded-full bg-white px-6 py-3 font-bold text-black shadow-sm hover:bg-[#dfe8ee] hover:text-black;
+    @apply rounded-full bg-paper px-6 py-3 font-bold text-ink shadow-sm hover:bg-mist hover:text-ink;
   }
 
   .hero-logo {
@@ -62,7 +67,7 @@ svg {
   .hero-logo svg {
     @apply h-full w-full;
     fill: none;
-    stroke: #050505;
+    stroke: #111418;
     stroke-width: 6;
     stroke-linecap: square;
     stroke-linejoin: miter;
@@ -81,7 +86,7 @@ svg {
   }
 
   .hero-copy h2 {
-    @apply mt-4 text-2xl font-medium text-black/60 md:text-3xl;
+    @apply mt-4 text-2xl font-medium text-ink/65 md:text-3xl;
   }
 
   .hero-socials {
@@ -89,7 +94,7 @@ svg {
   }
 
   .hero-socials a {
-    @apply grid h-12 w-12 place-items-center bg-[#d8d8d8] text-black shadow-sm transition hover:-translate-y-1 hover:bg-white;
+    @apply grid h-12 w-12 place-items-center bg-white/65 text-ink shadow-sm ring-1 ring-ink/10 backdrop-blur transition hover:-translate-y-1 hover:bg-paper;
   }
 
   .hero-photo-card {
@@ -104,7 +109,7 @@ svg {
 
   .hero-photo-card::before {
     @apply absolute bottom-4 left-1/2 h-[72%] w-[78%] -translate-x-1/2 rounded-full content-[''];
-    background: rgba(165, 198, 221, 0.12);
+    background: rgba(31, 111, 139, 0.18);
     filter: blur(44px);
   }
 
@@ -119,7 +124,7 @@ svg {
   }
 
   .section-kicker {
-    @apply mb-4 text-sm font-black uppercase tracking-[0.24em] text-ember;
+    @apply mb-4 text-sm font-black uppercase tracking-[0.24em] text-ocean;
   }
 
   .section-title {
@@ -131,15 +136,16 @@ svg {
   }
 
   .secondary-button {
-    @apply inline-flex items-center justify-center rounded-full border border-ink/15 bg-white/55 px-6 py-3 font-bold text-ink transition hover:border-ink hover:bg-white;
+    @apply inline-flex items-center justify-center rounded-full border border-ink/15 bg-white/45 px-6 py-3 font-bold text-ink transition hover:border-ocean hover:bg-white/75;
   }
 
   .icon-link {
-    @apply inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/10 bg-white/60 text-ink transition hover:border-ink hover:bg-ink hover:text-paper;
+    @apply inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/10 bg-white/55 text-ink transition hover:border-ocean hover:bg-ocean hover:text-paper;
   }
 
   .minimal-tech {
     @apply grid gap-8 border-y border-ink/10 py-12 md:grid-cols-[1fr_0.82fr] md:items-center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.22), transparent 50%);
   }
 
   .minimal-tech-copy h2 {
@@ -151,7 +157,7 @@ svg {
   }
 
   .minimal-tech-console {
-    @apply rounded-[1.6rem] border border-ink/10 bg-ink p-4 text-paper shadow-soft;
+    @apply rounded-[1.6rem] border border-white/10 bg-slate p-4 text-paper shadow-soft;
   }
 
   .console-top {
@@ -167,7 +173,7 @@ svg {
   }
 
   .console-line svg {
-    @apply text-[#dfe8ee];
+    @apply text-mist;
   }
 
   .console-tags {
@@ -175,7 +181,7 @@ svg {
   }
 
   .console-tags span {
-    @apply rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs font-bold text-paper/80;
+    @apply rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs font-bold text-mist;
   }
 
   .console-grid {
@@ -187,7 +193,7 @@ svg {
   }
 
   .console-grid strong {
-    @apply block font-display text-xl font-black text-paper;
+    @apply block font-display text-xl font-black text-mist;
   }
 
   .console-grid span {
@@ -215,7 +221,7 @@ svg {
   }
 
   .minimal-tech-categories svg {
-    @apply text-ocean;
+    @apply text-ember;
   }
 
   .minimal-tech-categories h3 {

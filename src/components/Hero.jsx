@@ -19,7 +19,10 @@ export function Hero() {
       <div className="hero-copy">
         <p>Hola, soy</p>
         <h1>{profile.name}</h1>
-        <h2>{profile.role}</h2>
+        <h2>
+          {profile.role}
+          <span>Systems Engineer</span>
+        </h2>
       </div>
 
       <div className="hero-socials" aria-label="Social links">

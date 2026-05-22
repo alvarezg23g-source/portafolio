@@ -90,6 +90,10 @@ svg {
     @apply mt-4 text-2xl font-medium text-ink/65 md:text-3xl;
   }
 
+  .hero-copy h2 span {
+    @apply mt-1 block text-xl font-medium text-ink/65 md:text-2xl;
+  }
+
   .hero-socials {
     @apply absolute bottom-10 left-[9%] z-20 flex gap-5;
     animation: fade-up 780ms ease-out 140ms both;

@@ -22,6 +22,7 @@ export function Hero() {
         <h2>
           {profile.role}
           <span>Systems Engineer</span>
+          <span>Backend Developer</span>
         </h2>
       </div>
 

@@ -10,11 +10,11 @@ export const profile = {
 
 export const skillGroups = [
   {
-    title: 'Lenguajes de Programacion',
+    title: 'Lenguajes de Programación',
     items: ['C#', 'PHP', 'JavaScript', 'HTML5', 'CSS3', 'SQL'],
   },
   {
-    title: 'Frameworks y Tecnologias',
+    title: 'Frameworks y Tecnologías',
     items: ['.NET Framework', 'Node.js', 'Laravel', 'ASP.NET'],
   },
   {
@@ -24,11 +24,11 @@ export const skillGroups = [
   {
     title: 'Infraestructura y Sistemas',
     items: [
-      'Administracion de sistemas operativos',
-      'Gestion y configuracion de redes',
-      'Virtualizacion de entornos',
-      'Configuracion de servidores',
-      'Soporte tecnico y mantenimiento de sistemas',
+      'Administración de sistemas operativos',
+      'Gestión y configuración de redes',
+      'Virtualización de entornos',
+      'Configuración de servidores',
+      'Soporte técnico y mantenimiento de sistemas',
     ],
   },
 ];
@@ -37,7 +37,7 @@ export const projects = [
   {
     title: 'Proyecto principal',
     description:
-      'Una aplicacion web enfocada en resolver un problema real con una interfaz clara y rapida.',
+      'Una aplicación web enfocada en resolver un problema real con una interfaz clara y rápida.',
     stack: ['React', 'Tailwind', 'API'],
     status: 'En desarrollo',
     github: '#',
@@ -46,7 +46,7 @@ export const projects = [
   {
     title: 'Dashboard personal',
     description:
-      'Panel para visualizar informacion importante con componentes reutilizables.',
+      'Panel para visualizar información importante con componentes reutilizables.',
     stack: ['Vite', 'Charts', 'CSS'],
     status: 'Idea',
     github: '#',

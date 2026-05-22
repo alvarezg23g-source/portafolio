@@ -24,12 +24,12 @@ const infrastructureHighlights = [
     command: 'ss -tulpn',
     label: 'Puertos verificados',
     detail:
-      'Apache2 escucha en el puerto 80, SSH queda disponible en 22 y SNMP se preparo en 161 para monitoreo.',
+      'Apache2 escucha en el puerto 80, SSH queda disponible en 22 y SNMP se preparó en 161 para monitoreo.',
     lines: ['tcp LISTEN 0.0.0.0:80 apache2', 'tcp LISTEN 0.0.0.0:22 sshd', 'udp UNCONN 0.0.0.0:161 snmpd'],
   },
   {
     icon: Globe2,
-    title: 'Resolucion de dominios',
+    title: 'Resolución de dominios',
     command: 'nslookup zona1.org',
     label: 'DNS probado',
     detail:
@@ -47,12 +47,12 @@ const infrastructureHighlights = [
   },
   {
     icon: Terminal,
-    title: 'Configuracion manual',
+    title: 'Configuración manual',
     command: 'nmcli device status',
     label: 'Debian 13',
     detail:
-      'Las tarjetas aparecen sin gestion porque las IPs fueron configuradas a mano en archivos del sistema.',
-    lines: ['lo connected', 'enp0s3 sin gestion', 'enp0s8 sin gestion'],
+      'Las tarjetas aparecen sin gestión porque las IPs fueron configuradas a mano en archivos del sistema.',
+    lines: ['lo connected', 'enp0s3 sin gestión', 'enp0s8 sin gestión'],
   },
   {
     icon: ShieldCheck,
@@ -60,7 +60,7 @@ const infrastructureHighlights = [
     command: 'nft list ruleset',
     label: 'nftables',
     detail:
-      'Reglas de enmascaramiento para salida a internet y trafico permitido solo cuando fue solicitado desde la red interna.',
+      'Reglas de enmascaramiento para salida a internet y tráfico permitido solo cuando fue solicitado desde la red interna.',
     lines: ['forward LAN -> WAN accept', 'ct state related,established accept', 'postrouting masquerade'],
   },
 ];
@@ -81,7 +81,7 @@ export function Projects() {
             <h3>Laboratorio Linux DNS, Web y Router</h3>
           </div>
           <p>
-            Implementacion de servicios sobre Debian 13 con BIND9, Apache2, direccionamiento LAN/WAN,
+            Implementación de servicios sobre Debian 13 con BIND9, Apache2, direccionamiento LAN/WAN,
             NAT y reglas de firewall. El objetivo fue levantar una red funcional, documentada y lista
             para clientes internos.
           </p>

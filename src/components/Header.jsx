@@ -2,8 +2,8 @@ import { Github, Mail, MessageCircle } from 'lucide-react';
 import { profile } from '../data/portfolio.js';
 
 const navItems = [
-  { label: 'Sobre mi', href: '#about' },
-  { label: 'Skills', href: '#skills' },
+  { label: 'Sobre mí', href: '#about' },
+  { label: 'Habilidades', href: '#skills' },
   { label: 'Proyectos', href: '#projects' },
   { label: 'Contacto', href: '#contact' },
 ];

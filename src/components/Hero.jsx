@@ -8,16 +8,16 @@ export function Hero() {
       <div className="hero-dark-panel" />
 
       <nav className="hero-nav" aria-label="Principal">
-        <a href="#about">About me</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Portfolio</a>
+        <a href="#about">Sobre mí</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#projects">Portafolio</a>
         <a className="hero-nav-cta" href="#contact">
-          Contact Me
+          Contáctame
         </a>
       </nav>
 
       <div className="hero-copy">
-        <p>Hi, I am</p>
+        <p>Hola, soy</p>
         <h1>{profile.name}</h1>
         <h2>{profile.role}</h2>
       </div>

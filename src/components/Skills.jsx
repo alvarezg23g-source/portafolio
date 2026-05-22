@@ -9,14 +9,14 @@ export function Skills() {
     <section id="skills" className="section">
       <div className="minimal-tech">
         <div className="minimal-tech-copy">
-          <h2>Tecnologias y Herramientas</h2>
+          <h2>Tecnologías y Herramientas</h2>
           <p>
-            Un conjunto de tecnologias para construir aplicaciones modernas, mantener sistemas
+            Un conjunto de tecnologías para construir aplicaciones modernas, mantener sistemas
             estables y conectar software con datos, redes e infraestructura.
           </p>
         </div>
 
-        <div className="minimal-tech-console" aria-label="Resumen tecnico">
+        <div className="minimal-tech-console" aria-label="Resumen técnico">
           <div className="console-top">
             <span />
             <span />
@@ -34,7 +34,7 @@ export function Skills() {
           <div className="console-grid">
             <div>
               <strong>04</strong>
-              <span>areas</span>
+              <span>áreas</span>
             </div>
             <div>
               <strong>18+</strong>

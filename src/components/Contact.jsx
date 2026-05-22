@@ -12,6 +12,8 @@ export function Contact() {
               Hagamos algo que valga la pena mostrar.
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-paper/70 sm:text-base">
+              Si tienes una idea, un proyecto o una oportunidad, podemos conversar y construir una
+              solución clara, moderna y bien presentada.
             </p>
           </div>
           <a

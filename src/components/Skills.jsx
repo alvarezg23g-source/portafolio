@@ -9,8 +9,7 @@ export function Skills() {
     <section id="skills" className="section">
       <div className="minimal-tech">
         <div className="minimal-tech-copy">
-          <div className="section-kicker">Tecnologias y Herramientas</div>
-          <h2>Minimal Tech Landing Page</h2>
+          <h2>Tecnologias y Herramientas</h2>
           <p>
             Un conjunto de tecnologias para construir aplicaciones modernas, mantener sistemas
             estables y conectar software con datos, redes e infraestructura.

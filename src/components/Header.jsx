@@ -10,15 +10,15 @@ const navItems = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-ink/10 bg-paper/85 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-ink/10 bg-paper/82 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-        <a href="#top" className="font-display text-lg font-bold tracking-tight">
+        <a href="#top" className="font-display text-lg font-bold tracking-tight transition hover:text-ocean">
           {profile.name}
         </a>
 
         <div className="hidden items-center gap-6 text-sm font-medium md:flex">
           {navItems.map((item) => (
-            <a key={item.href} href={item.href} className="text-ink/70 transition hover:text-ink">
+            <a key={item.href} href={item.href} className="text-ink/70 transition hover:text-ocean">
               {item.label}
             </a>
           ))}

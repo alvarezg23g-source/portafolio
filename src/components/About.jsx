@@ -4,7 +4,7 @@ export function About() {
       <div className="section-kicker">Sobre mí</div>
       <div className="grid gap-8 md:grid-cols-[0.8fr_1.2fr]">
         <h2 className="section-title">Una presencia digital con identidad propia</h2>
-        <div className="space-y-4 text-base leading-8 text-ink/70 sm:space-y-5 sm:text-lg">
+        <div className="space-y-4 text-base leading-8 text-paper/70 sm:space-y-5 sm:text-lg">
           <p>
             Este portafolio fue creado para mostrar más que proyectos: representa ideas,
             creatividad y la forma en que construyo soluciones. Cada sección está diseñada para

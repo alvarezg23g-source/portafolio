@@ -7,7 +7,7 @@ import { Skills } from './components/Skills.jsx';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-transparent text-ink">
+    <div className="min-h-screen bg-transparent text-paper">
       <main>
         <Hero />
         <About />

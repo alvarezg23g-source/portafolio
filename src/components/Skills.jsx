@@ -38,11 +38,11 @@ export function Skills() {
             </div>
             <div>
               <strong>18+</strong>
-              <span>skills</span>
+              <span>habilidades</span>
             </div>
             <div>
-              <strong>Full</strong>
-              <span>scope</span>
+              <strong>Total</strong>
+              <span>alcance</span>
             </div>
           </div>
         </div>

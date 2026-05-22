@@ -16,10 +16,10 @@ body {
   margin: 0;
   min-width: 320px;
   background:
-    radial-gradient(circle at 18% 18%, rgba(34, 211, 238, 0.1), transparent 24rem),
-    radial-gradient(circle at 82% 42%, rgba(37, 99, 235, 0.08), transparent 26rem),
-    #ffffff;
-  color: #0b0f14;
+    radial-gradient(circle at 14% 16%, rgba(56, 189, 248, 0.12), transparent 24rem),
+    radial-gradient(circle at 86% 36%, rgba(29, 78, 216, 0.16), transparent 28rem),
+    linear-gradient(180deg, #071016 0%, #0b1220 42%, #071016 100%);
+  color: #f8fafc;
 }
 
 img,
@@ -30,12 +30,12 @@ svg {
 @layer components {
   .hero-shell {
     @apply relative isolate min-h-screen overflow-hidden;
-    background: #050505;
+    background: #03070b;
   }
 
   .hero-left-panel {
     @apply absolute inset-0 -z-10;
-    background: #ffffff;
+    background: #edf2f7;
     clip-path: polygon(0 0, 59% 0, 44% 100%, 0 100%);
   }
 
@@ -43,9 +43,9 @@ svg {
     @apply absolute inset-0 -z-20;
     background:
       radial-gradient(circle at 72% 30%, rgba(34, 211, 238, 0.22), transparent 18rem),
-      radial-gradient(circle at 92% 78%, rgba(37, 99, 235, 0.18), transparent 22rem),
+      radial-gradient(circle at 92% 78%, rgba(29, 78, 216, 0.2), transparent 22rem),
       linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent 58%),
-      #050505;
+      #03070b;
   }
 
   .hero-nav {
@@ -128,11 +128,11 @@ svg {
   }
 
   .section-kicker {
-    @apply mb-4 text-sm font-black uppercase tracking-[0.24em] text-ocean;
+    @apply mb-4 text-sm font-black uppercase tracking-[0.24em] text-ember;
   }
 
   .section-title {
-    @apply font-display text-3xl font-black leading-tight tracking-tight text-ink md:text-5xl;
+    @apply font-display text-3xl font-black leading-tight tracking-tight text-paper md:text-5xl;
   }
 
   .primary-button {
@@ -148,16 +148,16 @@ svg {
   }
 
   .minimal-tech {
-    @apply grid gap-8 border-y border-ink/10 py-12 md:grid-cols-[1fr_0.82fr] md:items-center;
+    @apply grid gap-8 border-y border-white/10 py-12 md:grid-cols-[1fr_0.82fr] md:items-center;
     background: transparent;
   }
 
   .minimal-tech-copy h2 {
-    @apply font-display text-4xl font-black leading-none tracking-tight text-ink sm:text-5xl md:text-6xl;
+    @apply font-display text-4xl font-black leading-none tracking-tight text-paper sm:text-5xl md:text-6xl;
   }
 
   .minimal-tech-copy p {
-    @apply mt-5 max-w-2xl text-base leading-8 text-ink/70 sm:text-lg;
+    @apply mt-5 max-w-2xl text-base leading-8 text-paper/70 sm:text-lg;
   }
 
   .minimal-tech-console {
@@ -208,7 +208,7 @@ svg {
   }
 
   .minimal-tech-categories {
-    @apply grid gap-0 divide-y divide-ink/10 border-b border-ink/10 md:grid-cols-2 md:divide-x md:divide-y-0;
+    @apply grid gap-0 divide-y divide-white/10 border-b border-white/10 md:grid-cols-2 md:divide-x md:divide-y-0;
   }
 
   .minimal-tech-categories article {
@@ -228,68 +228,68 @@ svg {
   }
 
   .minimal-tech-categories svg {
-    @apply text-ocean;
+    @apply text-ember;
   }
 
   .minimal-tech-categories h3 {
-    @apply font-display text-lg font-black leading-tight text-ink;
+    @apply font-display text-lg font-black leading-tight text-paper;
   }
 
   .minimal-tech-categories p {
-    @apply text-sm font-medium leading-7 text-ink/65;
+    @apply text-sm font-medium leading-7 text-paper/65;
   }
 
   .lab-project {
-    @apply overflow-hidden rounded-[1.8rem] border border-ink/10 bg-white shadow-soft;
+    @apply overflow-hidden rounded-[1.8rem] border border-white/10 bg-slate shadow-soft;
   }
 
   .lab-project__intro {
-    @apply grid gap-5 border-b border-ink/10 p-5 sm:p-7 lg:grid-cols-[0.86fr_1fr] lg:items-end;
+    @apply grid gap-5 border-b border-white/10 p-5 sm:p-7 lg:grid-cols-[0.86fr_1fr] lg:items-end;
     background:
-      radial-gradient(circle at 92% 20%, rgba(34, 211, 238, 0.16), transparent 14rem),
-      linear-gradient(135deg, rgba(15, 17, 21, 0.06), transparent 38%),
-      #ffffff;
+      radial-gradient(circle at 92% 20%, rgba(56, 189, 248, 0.14), transparent 14rem),
+      linear-gradient(135deg, rgba(255, 255, 255, 0.07), transparent 38%),
+      #0b1220;
   }
 
   .lab-project__eyebrow {
-    @apply mb-4 inline-flex items-center gap-2 rounded-full border border-ink/10 bg-mist px-3 py-1.5 text-xs font-black uppercase tracking-[0.16em] text-ink/70;
+    @apply mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs font-black uppercase tracking-[0.16em] text-paper/70;
   }
 
   .lab-project__eyebrow svg {
-    @apply text-ocean;
+    @apply text-ember;
   }
 
   .lab-project__intro h3 {
-    @apply font-display text-3xl font-black leading-tight tracking-tight text-ink sm:text-4xl;
+    @apply font-display text-3xl font-black leading-tight tracking-tight text-paper sm:text-4xl;
   }
 
   .lab-project__intro p {
-    @apply max-w-2xl text-sm font-medium leading-7 text-ink/65 sm:text-base;
+    @apply max-w-2xl text-sm font-medium leading-7 text-paper/65 sm:text-base;
   }
 
   .lab-project__map {
-    @apply grid gap-px bg-ink/10 text-center text-sm font-bold sm:grid-cols-6;
+    @apply grid gap-px bg-white/10 text-center text-sm font-bold sm:grid-cols-6;
   }
 
   .lab-project__map span,
   .lab-project__map strong {
-    @apply bg-white px-3 py-4;
+    @apply bg-slate px-3 py-4;
   }
 
   .lab-project__map span {
-    @apply text-ink/50;
+    @apply text-paper/50;
   }
 
   .lab-project__map strong {
-    @apply font-display text-ink;
+    @apply font-display text-paper;
   }
 
   .lab-evidence-grid {
-    @apply grid gap-px bg-ink/10 md:grid-cols-2 xl:grid-cols-3;
+    @apply grid gap-px bg-white/10 md:grid-cols-2 xl:grid-cols-3;
   }
 
   .lab-evidence-card {
-    @apply bg-white p-5 transition duration-300 hover:bg-mist sm:p-6;
+    @apply bg-slate p-5 transition duration-300 hover:bg-mist sm:p-6;
   }
 
   .lab-evidence-card__head {
@@ -297,19 +297,19 @@ svg {
   }
 
   .lab-evidence-card__head > span {
-    @apply grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-ink text-ember;
+    @apply grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-white/10 text-ember;
   }
 
   .lab-evidence-card h4 {
-    @apply font-display text-lg font-black leading-tight text-ink;
+    @apply font-display text-lg font-black leading-tight text-paper;
   }
 
   .lab-evidence-card small {
-    @apply mt-1 block text-xs font-black uppercase tracking-[0.16em] text-ink/45;
+    @apply mt-1 block text-xs font-black uppercase tracking-[0.16em] text-paper/45;
   }
 
   .lab-evidence-card p {
-    @apply mt-4 text-sm font-medium leading-7 text-ink/65;
+    @apply mt-4 text-sm font-medium leading-7 text-paper/65;
   }
 
   .lab-terminal {
@@ -338,8 +338,8 @@ svg {
   .contact-panel {
     background:
       radial-gradient(circle at 86% 12%, rgba(34, 211, 238, 0.18), transparent 14rem),
-      radial-gradient(circle at 10% 90%, rgba(37, 99, 235, 0.16), transparent 16rem),
-      #0b0f14;
+      radial-gradient(circle at 10% 90%, rgba(29, 78, 216, 0.18), transparent 16rem),
+      #071016;
   }
 }
 

@@ -226,6 +226,98 @@ svg {
   .minimal-tech-categories p {
     @apply text-sm font-medium leading-7 text-ink/65;
   }
+
+  .lab-project {
+    @apply overflow-hidden rounded-[1.8rem] border border-ink/10 bg-white shadow-soft;
+  }
+
+  .lab-project__intro {
+    @apply grid gap-5 border-b border-ink/10 p-5 sm:p-7 lg:grid-cols-[0.86fr_1fr] lg:items-end;
+    background:
+      linear-gradient(135deg, rgba(15, 17, 21, 0.06), transparent 38%),
+      #ffffff;
+  }
+
+  .lab-project__eyebrow {
+    @apply mb-4 inline-flex items-center gap-2 rounded-full border border-ink/10 bg-mist px-3 py-1.5 text-xs font-black uppercase tracking-[0.16em] text-ink/70;
+  }
+
+  .lab-project__eyebrow svg {
+    @apply text-ink;
+  }
+
+  .lab-project__intro h3 {
+    @apply font-display text-3xl font-black leading-tight tracking-tight text-ink sm:text-4xl;
+  }
+
+  .lab-project__intro p {
+    @apply max-w-2xl text-sm font-medium leading-7 text-ink/65 sm:text-base;
+  }
+
+  .lab-project__map {
+    @apply grid gap-px bg-ink/10 text-center text-sm font-bold sm:grid-cols-6;
+  }
+
+  .lab-project__map span,
+  .lab-project__map strong {
+    @apply bg-white px-3 py-4;
+  }
+
+  .lab-project__map span {
+    @apply text-ink/50;
+  }
+
+  .lab-project__map strong {
+    @apply font-display text-ink;
+  }
+
+  .lab-evidence-grid {
+    @apply grid gap-px bg-ink/10 md:grid-cols-2 xl:grid-cols-3;
+  }
+
+  .lab-evidence-card {
+    @apply bg-white p-5 sm:p-6;
+  }
+
+  .lab-evidence-card__head {
+    @apply mb-4 flex items-center gap-3;
+  }
+
+  .lab-evidence-card__head > span {
+    @apply grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-ink text-paper;
+  }
+
+  .lab-evidence-card h4 {
+    @apply font-display text-lg font-black leading-tight text-ink;
+  }
+
+  .lab-evidence-card small {
+    @apply mt-1 block text-xs font-black uppercase tracking-[0.16em] text-ink/45;
+  }
+
+  .lab-evidence-card p {
+    @apply mt-4 text-sm font-medium leading-7 text-ink/65;
+  }
+
+  .lab-terminal {
+    @apply min-h-[10.6rem] rounded-2xl border border-white/10 bg-ink p-4 font-mono text-xs leading-6 text-white shadow-sm;
+  }
+
+  .lab-terminal__bar {
+    @apply mb-3 flex gap-1.5;
+  }
+
+  .lab-terminal__bar i {
+    @apply h-2.5 w-2.5 rounded-full bg-white/25;
+  }
+
+  .lab-terminal code {
+    @apply mb-2 block whitespace-nowrap font-bold text-white;
+  }
+
+  .lab-terminal span {
+    @apply block text-white/70;
+  }
 }
 
 @media (max-width: 900px) {
@@ -339,6 +431,26 @@ svg {
 
   .minimal-tech {
     padding-block: 2.5rem;
+  }
+
+  .lab-project {
+    border-radius: 1.25rem;
+  }
+
+  .lab-project__intro {
+    padding: 1.25rem;
+  }
+
+  .lab-project__intro h3 {
+    font-size: 2rem;
+  }
+
+  .lab-project__map {
+    grid-template-columns: 1fr;
+  }
+
+  .lab-evidence-card {
+    padding: 1.25rem;
   }
 
   .minimal-tech-console {
